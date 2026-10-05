@@ -11,7 +11,8 @@
 
 /* ---------- Base font everywhere ---------- */
 html, body, .wufoo, .wufoo input, .wufoo textarea,
-.wufoo select, .wufoo label, .wufoo div, .wufoo p {
+.wufoo select, .wufoo label, .wufoo legend, .wufoo span,
+.wufoo div, .wufoo p {
   font-family: 'Inter', Helvetica, Arial, sans-serif !important;
   color: #72776E;
 }
@@ -47,7 +48,8 @@ html, body {
 }
 
 /* ---------- Field labels ---------- */
-.wufoo label.desc {
+.wufoo label.desc,
+.wufoo legend.desc {
   font-size: 15px !important;
   font-weight: 500 !important;
   color: #72776E !important;
@@ -87,9 +89,14 @@ html, body {
 }
 
 /* Small helper text under fields */
-.wufoo .instruct,
-.wufoo label {
+.wufoo .instruct {
   font-size: 13px !important;
+}
+
+/* ---------- Checkbox + radio options ---------- */
+.wufoo label.choice {
+  font-size: 15px !important;
+  color: #72776E !important;
 }
 
 /* ---------- Submit button (bigger) ---------- */
