@@ -1,0 +1,154 @@
+/* =========================================================
+   Wufoo custom CSS – ericmjoseph.com contact form
+   Body font: Inter (matches site)
+   Heading font: Fraunces (free stand-in for P22 Mackinac Pro)
+   Colors pulled from the site:
+     Heading green ... #30463ADB (86% opacity)
+     Body gray ....... #72776E
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&display=swap');
+
+/* Inter (self-hosted variable font) */
+@font-face {
+  font-family: 'Inter';
+  src: url('https://cdn.jsdelivr.net/gh/annaprzv/wufoo-styles@main/Inter-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* P22 Mackinac (self-hosted) */
+@font-face {
+  font-family: 'P22 Mackinac Web';
+  src: url('https://cdn.jsdelivr.net/gh/annaprzv/wufoo-styles@main/P22Mackinac-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Base font everywhere ---------- */
+html, body, .wufoo, .wufoo input, .wufoo textarea,
+.wufoo select, .wufoo label, .wufoo legend, .wufoo span,
+.wufoo div, .wufoo p {
+  font-family: 'Inter', Helvetica, Arial, sans-serif !important;
+  color: #72776E;
+}
+
+/* ---------- Strip Wufoo's default box/background ---------- */
+html, body {
+  background: transparent !important;
+}
+#container {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+/* ---------- Form title + description ---------- */
+.wufoo .info {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+.wufoo .info h2,
+.wufoo li.section h3,
+.wufoo .section h3 {
+  font-family: 'P22 Mackinac Web', 'Fraunces', Georgia, serif !important;
+  font-size: 35.5px !important;
+  line-height: 1.3 !important;
+  font-weight: 400 !important;
+  color: #30463ADB !important;
+}
+.wufoo .info div {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  color: #72776E !important;
+}
+
+/* Section break: remove default line/background */
+.wufoo li.section {
+  border-top: none !important;
+  background: transparent !important;
+}
+
+/* ---------- Field labels ---------- */
+.wufoo label.desc,
+.wufoo legend.desc,
+#container .wufoo fieldset legend.desc,
+.wufoo li fieldset legend.desc {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #72776E !important;
+  padding-bottom: 6px !important;
+}
+.wufoo .req {
+  color: #72776E !important;
+}
+
+/* ---------- Inputs, dropdowns, message box ---------- */
+.wufoo input.text,
+.wufoo input.email,
+.wufoo input.phone,
+.wufoo textarea.textarea,
+.wufoo select.select {
+  font-size: 16px !important;
+  color: #72776E !important;
+  padding: 12px 14px !important;
+  border: 1px solid #c9ccc6 !important;
+  border-radius: 0 !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+  box-sizing: border-box;
+}
+.wufoo input.text:focus,
+.wufoo input.email:focus,
+.wufoo input.phone:focus,
+.wufoo textarea.textarea:focus,
+.wufoo select.select:focus {
+  border-color: #30463A !important;
+  outline: none !important;
+}
+
+/* Remove the yellow highlight on the active field */
+.wufoo li.focused {
+  background-color: transparent !important;
+}
+
+/* Small helper text under fields */
+.wufoo .instruct {
+  font-size: 13px !important;
+}
+
+/* ---------- Checkbox + radio options ---------- */
+.wufoo label.choice,
+.wufoo li fieldset label.choice {
+  font-size: 15px !important;
+  color: #72776E !important;
+}
+
+/* ---------- Submit button (bigger) ---------- */
+.wufoo input.btTxt,
+.wufoo #saveForm {
+  font-family: 'Inter', Helvetica, Arial, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff !important;
+  background: #72776E !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 20px 64px !important;
+  min-width: 260px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  /* Want it full width? Delete the two slashes on the next line */
+  /* width: 100% !important; */
+}
+.wufoo input.btTxt:hover,
+.wufoo #saveForm:hover {
+  background: #5c6158 !important;
+}
